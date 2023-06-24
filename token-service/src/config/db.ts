@@ -1,4 +1,5 @@
 import { Sequelize } from 'sequelize';
+require("dotenv").config({path:"./.env"})
 
 const connectDb = () => {
   const sequelize = new Sequelize({

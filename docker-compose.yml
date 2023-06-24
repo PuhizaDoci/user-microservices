@@ -5,47 +5,47 @@ services:
     ports:
       - 3001:3000
     environment:
-      - DATABASE_URL=userdb.cluster-cbpyoam15gjt.eu-north-1.rds.amazonaws.com/5432
+      - DATABASE_URL=userdb.cbpyoam15gjt.eu-north-1.rds.amazonaws.com/5432
       - DATABASE_NAME=UserDB
       - DATABASE_USERNAME=postgres
-      - DATABASE_PASSWORD=password123
+      - DATABASE_PASSWORD=password
 
   user-login-service:
     build: ./user-login-service
     ports:
       - 3002:3000
     environment:
-      - DATABASE_URL=userdb.cluster-cbpyoam15gjt.eu-north-1.rds.amazonaws.com/5432
+      - DATABASE_URL=userdb.cbpyoam15gjt.eu-north-1.rds.amazonaws.com/5432
       - DATABASE_NAME=UserDB
       - DATABASE_USERNAME=postgres
-      - DATABASE_PASSWORD=password123
+      - DATABASE_PASSWORD=password
 
   token-service:
     build: ./token-service
     ports:
       - 3003:3000
     environment:
-      - DATABASE_URL=userdb.cluster-cbpyoam15gjt.eu-north-1.rds.amazonaws.com/5432
+      - DATABASE_URL=userdb.cbpyoam15gjt.eu-north-1.rds.amazonaws.com/5432
       - DATABASE_NAME=UserDB
       - DATABASE_USERNAME=postgres
-      - DATABASE_PASSWORD=password123
+      - DATABASE_PASSWORD=password
 
   user-management-service:
     build: ./user-management-service
     ports:
       - 3004:3000
     environment:
-      - DATABASE_URL=userdb.cluster-cbpyoam15gjt.eu-north-1.rds.amazonaws.com/5432
+      - DATABASE_URL=userdb.cbpyoam15gjt.eu-north-1.rds.amazonaws.com/5432
       - DATABASE_NAME=UserDB
       - DATABASE_USERNAME=postgres
-      - DATABASE_PASSWORD=password123
+      - DATABASE_PASSWORD=password
       
   logging-service:
     build: ./logging-service
     ports:
       - 3006:3000
     environment:
-      - DATABASE_URL=userdb.cluster-cbpyoam15gjt.eu-north-1.rds.amazonaws.com/5432
+      - DATABASE_URL=userdb.cbpyoam15gjt.eu-north-1.rds.amazonaws.com/5432
       - DATABASE_NAME=UserDB
       - DATABASE_USERNAME=postgres
-      - DATABASE_PASSWORD=password123
+      - DATABASE_PASSWORD=password

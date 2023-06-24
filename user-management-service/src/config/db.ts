@@ -1,10 +1,7 @@
 import { Sequelize } from 'sequelize';
 require("dotenv").config({path:"./.env"})
 
-const connectDb = () => {
-  console.log(process.env.DB_HOST);
-  console.log(process.env.DB_PORT);
-  
+const connectDb = () => {  
   const sequelize = new Sequelize({
     dialect: 'postgres',
     host: process.env.DB_HOST,
@@ -13,8 +10,6 @@ const connectDb = () => {
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
   });
-
-  console.log(sequelize);
   
   sequelize.authenticate()
     .then(() => {
